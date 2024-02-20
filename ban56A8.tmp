@@ -1,0 +1,13 @@
+extends Area2D
+@onready var gamemanager = %Gamemanager
+
+func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	if (body.name == "CharacterBody2D"):
+		queue_free()
+		gamemanager.addPoint()
+		
+
+
+
+
+

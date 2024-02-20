@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyt5aejbeeqxb"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_6oluk"]
+[ext_resource type="Texture2D" uid="uid://dmg6celbjjyuv" path="res://Yellow.png" id="1_iqb78"]
+[ext_resource type="Texture2D" uid="uid://15tt8k5b65is" path="res://LogoText.png" id="2_nmsg2"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_6oluk")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1150.0
+offset_bottom = 678.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_iqb78")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 343.0
+offset_top = 94.0
+offset_right = 806.0
+offset_bottom = 270.0
+texture = ExtResource("2_nmsg2")
+metadata/_edit_use_anchors_ = true
+
+[node name="Level1But" type="Button" parent="."]
+offset_left = 151.0
+offset_top = 378.0
+offset_right = 335.0
+offset_bottom = 460.0
+theme_override_font_sizes/font_size = 30
+text = "Level 1
+"
+
+[node name="Level2But" type="Button" parent="."]
+offset_left = 810.0
+offset_top = 363.0
+offset_right = 996.0
+offset_bottom = 448.0
+theme_override_font_sizes/font_size = 30
+text = "Level 2"
+
+[connection signal="pressed" from="Level1But" to="." method="_on_level_1_but_pressed"]
+[connection signal="pressed" from="Level2But" to="." method="_on_level_2_but_pressed"]
